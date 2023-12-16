@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NoiseMeter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8qduVg0T0kGtZm3nJXl3eM2N5Fw5l/6m/RtZxixicp4fXoC5T9Mi/AfFq03j" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo" onclick="handleLogoClick();">Noise Meter</a>
+        <nav class="navbar">
+            <a href="#" id="homeLink" onclick="handleHomeClick();">Home</a>
+            <a href="Dashboard.html" id="dashboardLink">Dashboard</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#" id="logoutButton" onclick="handleLogout();">Log Out</a>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <div class="social-links">
+            <a href="https://www.facebook.com/opensoundmeter/"><i class="bx bxl-facebook"></i></a>
+            <a href="https://twitter.com/meter_pro?lang=bn"><i class="bx bxl-twitter"></i></a>
+            <!-- More social links -->
+        </div>
+        <div class="sidebar-info">
+            <h3>Announcements</h3>
+            
+            <!-- Announcement 1 -->
+            <div class="announcement">
+                <h4>New Feature Release</h4>
+                <p>We've just launched our new noise analysis feature. Check out the dashboard for more details!</p>
+            </div>
+        
+            <!-- Announcement 2 -->
+            <div class="announcement">
+                <h4>Upcoming Webinar</h4>
+                <p>Join us on March 15th for a webinar on 'Effective Noise Management in Urban Areas'. Register now!</p>
+            </div>
+        
+            <!-- Announcement 3 -->
+            <div class="announcement">
+                <h4>Latest Blog Post</h4>
+                <p>Read our latest blog on 'The Impact of Noise Pollution on Wildlife' for insightful analysis and tips.</p>
+            </div>
+        
+            <!-- More announcements can be added here -->
+        </div>
+        
+    </aside>
+
+    <div class="homepage-about-intro">
+        <h1>NOISE METER</h1>
+        <p>Welcome to the forefront of sound measurement innovation.</p>
+    </div>
+
+    
+
+    <main>
+        <div class="chart-main-focus">
+            <h2>Sound Level Analysis</h2>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+            <p class="chart-summary">
+                The chart illustrates the daily pattern of sound levels, highlighting the ebb and flow of urban noise over a school day. The data reveals lower sound levels during the late night and early morning hours, reflecting the relative quiet of the city at rest. As the day progresses, there is a noticeable increase in noise levels, peaking during the morning and late afternoon, likely corresponding to busy periods of commuting and evening activities. The gradual decline in sound levels in the late evening aligns with the winding down of daily activities. This detailed analysis of noise variation is invaluable for urban planners and authorities, offering insights into the rhythm of urban life and informing targeted noise control measures and urban design.
+            </p>
+        </div>
+    </main>
+
+    <div class="navigation-boxes">
+        <div class="box">
+            <p class="box-title">Dashboard</p>
+            <a href="Dashboard.html">
+                <img src="chart.jpg" alt="Dashboard">
+            </a>
+        </div>
+        <div class="box">
+            <p class="box-title">About Us</p>
+            <a href="AboutUs.html">
+                <img src="LogoB.png" alt="About Us">
+            </a>
+        </div>
+    </div>
+    
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sound Meter Co. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="Privacy.html">Privacy Policy</a></li>
+                <li><a href="TermsOfUse.html">Terms of Service</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
+"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+0dFszD3ph/gOYF/6XUJFlLChSJ199Nq8fj" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

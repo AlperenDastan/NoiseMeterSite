@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Measurement Dashboard</title>
+    <link rel="stylesheet" href="AboutUs.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo" onclick="handleLogoClick();">Noise Meter</a>
+        <nav class="navbar">
+            <a href="#" id="homeLink" onclick="handleHomeClick();">Home</a>
+            <a href="Dashboard.html" id="dashboardLink" style="display: none;">Dashboard</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#" id="logoutButton" style="display: none;" onclick="handleLogout();">Log Out</a>
+        </nav>  
+    </header>
+
+    <div class="homepage-about-intro">
+        <h1>Dashboard</h1>
+        <p>Welcome to the forefront of sound measurement innovation.</p>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <a href="#" onclick="displayChart('barChart')">Bar Chart</a>
+            <a href="#" onclick="displayChart('lineChart')">Line Chart</a>
+            <a href="#" onclick="displayChart('pieChart')">Pie Chart</a>
+            <a href="#" onclick="displayChart('polarAreaChart')">Polar Area Chart</a>
+            <a href="#" onclick="displayChart('radarChart')">Radar Chart</a>
+            <label for="dateFilter">Filter by Date:</label>
+            <input type="date" id="dateFilter" onchange="filterByDateTime(this.value)">
+            <button onclick="resetChart()">Reset Chart</button>
+        </div>
+
+        <main>
+            <div class="chart-main-focus">
+                <h2>Sound Level Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="barChart"></canvas>
+                    <div id="filteredDataDisplay"></div>
+                    <canvas id="lineChart" style="display: none;"></canvas>
+                    <canvas id="pieChart" style="display: none;"></canvas>
+                    <canvas id="polarAreaChart" style="display: none;"></canvas>
+                    <canvas id="radarChart" style="display: none;"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+    <script src="common.js"></script>
+    <script src="Filter.js"></script>
+
+</body>
+</html>

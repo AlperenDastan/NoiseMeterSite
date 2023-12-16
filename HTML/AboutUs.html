@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NoiseMeter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8qduVg0T0kGtZm3nJXl3eM2N5Fw5l/6m/RtZxixicp4fXoC5T9Mi/AfFq03j" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+
+
+    
+    <header class="header">
+        <a href="#" class="logo" onclick="handleLogoClick();">Noise Meter</a>
+        <nav class="navbar">
+            <a href="#" id="homeLink" onclick="handleHomeClick();">Home</a> <!-- Always visible Home link -->
+            <a href="Dashboard.html" id="dashboardLink" style="display: none;">Dashboard</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#" id="logoutButton" style="display: none;" onclick="handleLogout();">Log Out</a>
+        </nav>
+    </header>
+
+    <div class="about-intro">
+        <h1>About Us</h1>
+        <p>Welcome to the forefront of sound measurement innovation.</p>
+    </div>
+    
+    <div class="about-details">
+        <div class="about-image">
+            <img src="LogoB.png" alt="Company Logo">
+        </div>
+        <div class="about-content">
+            <h2>Revolutionizing Sound Measurement</h2>
+            <p>Welcome to <strong>SoundTech Innovations</strong>, the forefront of sound measurement technology. Our journey began with a simple vision: to transform the way sound is measured and experienced.</p>
+            <p>Our flagship product, the <strong>AcoustiMax</strong>, isn't just a tool; it's a game changer for audio professionals and enthusiasts. Designed with precision, it offers unparalleled accuracy in assessing and optimizing room acoustics.</p>
+            <p>At SoundTech Innovations, we're more than a company; we're a team driven by a passion for audio excellence. Join us in our journey to redefine sound measurement and experience sound like never before.</p>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sound Meter Co. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="Privacy.html">Privacy Policy</a></li>
+                <li><a href="TermsOfUse.html">Terms of Service</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+0dFszD3ph/gOYF/6XUJFlLChSJ199Nq8fj" crossorigin="anonymous"></script>
+
+</body>
+</html>

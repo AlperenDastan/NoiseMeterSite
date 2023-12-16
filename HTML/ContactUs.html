@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NoiseMeter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8qduVg0T0kGtZm3nJXl3eM2N5Fw5l/6m/RtZxixicp4fXoC5T9Mi/AfFq03j" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("cU8IeIZ8AD9Tln90A");
+        })();
+    </script>
+
+<script src="email.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo" onclick="handleLogoClick();">Noise Meter</a>
+        <nav class="navbar">
+            <a href="#" id="homeLink" onclick="handleHomeClick();">Home</a> <!-- Always visible Home link -->
+            <a href="Dashboard.html" id="dashboardLink" style="display: none;">Dashboard</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#" id="logoutButton" style="display: none;" onclick="handleLogout();">Log Out</a>
+        </nav>
+    </header>
+    <div class="container contact-section">
+        <!-- Email Form Section -->
+        <div class="email-form-section">
+            <h2>Contact Us</h2>
+            <form id="emailForm" onsubmit="sendMail(event)">
+                <div class="form-field">
+                    <label for="fullname">Your Name:</label>
+                    <input type="text" id="fullname" placeholder="Full Name" required>
+                    <div class="error-msg" id="fullname-error"></div>
+                </div>
+                <div class="form-field">
+                    <label for="email_id">Your Email:</label>
+                    <input type="email" id="email_id" placeholder="Email" required>
+                    <div class="error-msg" id="email-error"></div>
+                </div>
+                <div class="form-field">
+                    <label for="num">Phone Number:</label>
+                    <input type="tel" id="num" placeholder="Phone Number" pattern="[0-9]+" title="Please enter numbers only" required>
+                    <div class="error-msg" id="num-error"></div>
+                </div>
+                <div class="form-field">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                    <div class="error-msg" id="subject-error"></div>
+                </div>
+                <div class="form-field">
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="3" required></textarea>
+                    <div class="error-msg" id="message-error"></div>
+                </div>
+
+            <button type="submit" class="email-submit-btn">Send Email</button>          
+          </form>
+            
+        </div>
+        
+    <script>function sendEmail(){
+        console.log("test email")
+    }
+    </script>
+        <!-- Information Section -->
+        <div class="information-section">
+            <h2>Contact Information</h2>
+            <p>If you have any questions or need further information about our sound measurement solutions, please don't hesitate to contact us. Our dedicated team is eager to assist you and ensure you have the best experience with our products.</p>
+            
+            <p><strong>Address:</strong> 123 Acoustics Ave, Sound City, AudioLand, 10101</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Email:</strong> info@soundmeterco.com</p>
+            
+            <p>For technical support, please email <strong>support@soundmeterco.com</strong>. Our technical team is available Monday through Friday, 9 AM to 5 PM.</p>
+            
+            <p>Follow us on social media for the latest updates and insights into sound measurement technology:</p>
+            <ul>
+                <li><a href="https://twitter.com/soundmeterco" target="_blank">Twitter: @soundmeterco</a></li>
+                <li><a href="https://www.facebook.com/soundmeterco" target="_blank">Facebook: Sound Meter Co.</a></li>
+                <li><a href="https://www.instagram.com/soundmeterco" target="_blank">Instagram: @soundmeterco</a></li>
+                <li><a href="https://www.linkedin.com/company/soundmeterco" target="_blank">LinkedIn: Sound Meter Co.</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+     
+    </div>
+    
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sound Meter Co. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="Privacy.html">Privacy Policy</a></li>
+                <li><a href="TermsOfUse.html">Terms of Service</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="common.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+0dFszD3ph/gOYF/6XUJFlLChSJ199Nq8fj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
