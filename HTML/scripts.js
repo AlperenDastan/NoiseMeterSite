@@ -13,7 +13,7 @@ let lineChart = undefined;
 
 let data = [];
 Initialize(selectedDate);
-setInterval(() => Initialize(selectedDate), 5000); // every 15 seconds, run it again
+setInterval(() => Initialize(selectedDate), 15000); // every 15 seconds, run it again
 
 
 /********** INITIALIZE **********/
