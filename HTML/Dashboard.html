@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
     <header class="header">
         <a href="#" class="logo" onclick="handleLogoClick();">Noise Meter</a>
@@ -17,7 +19,8 @@
             <a href="ContactUs.html">Contact Us</a>
             <a href="AboutUs.html">About Us</a>
             <a href="#" id="logoutButton" style="display: none;" onclick="handleLogout();">Log Out</a>
-        </nav>  
+        </nav>
+        <p id="userNameDisplay" style="font-size: 18px;"></p>
     </header>
 
     <div class="homepage-about-intro">
@@ -33,7 +36,7 @@
             <a href="#" onclick="displayChart('polarAreaChart')">Polar Area Chart</a>
             <a href="#" onclick="displayChart('radarChart')">Radar Chart</a>
             <label for="dateFilter">Filter by Date:</label>
-            <input type="date" id="dateFilter" onchange="filterByDateTime(this.value)">
+            <input type="date" id="dateFilter" onchange="Initialize(this.value)">
             <button onclick="resetChart()">Reset Chart</button>
         </div>
 
@@ -58,4 +61,5 @@
     <script src="Filter.js"></script>
 
 </body>
+
 </html>

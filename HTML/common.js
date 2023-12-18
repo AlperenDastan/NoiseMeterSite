@@ -16,7 +16,18 @@ function updateNavbar() {
     if (dashboardLink) {
         dashboardLink.style.display = isLoggedIn ? "block" : "none";
     }
+
+    updateUserNameDisplay();
 }
+
+
+function updateUserNameDisplay() {
+    const userName = sessionStorage.getItem("userName");
+    if (userName) {
+        document.getElementById("userNameDisplay").textContent = `${userName}`;
+    }
+}
+
 
 // Function to handle the logout process
 function handleLogout() {
