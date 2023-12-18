@@ -32,9 +32,6 @@
         <div class="sidebar">
             <a href="#" onclick="displayChart('barChart')">Bar Chart</a>
             <a href="#" onclick="displayChart('lineChart')">Line Chart</a>
-            <a href="#" onclick="displayChart('pieChart')">Pie Chart</a>
-            <a href="#" onclick="displayChart('polarAreaChart')">Polar Area Chart</a>
-            <a href="#" onclick="displayChart('radarChart')">Radar Chart</a>
             <label for="dateFilter">Filter by Date:</label>
             <input type="date" id="dateFilter" onchange="Initialize(this.value)">
             <button onclick="resetChart()">Reset Chart</button>
@@ -47,13 +44,32 @@
                     <canvas id="barChart"></canvas>
                     <div id="filteredDataDisplay"></div>
                     <canvas id="lineChart" style="display: none;"></canvas>
-                    <canvas id="pieChart" style="display: none;"></canvas>
-                    <canvas id="polarAreaChart" style="display: none;"></canvas>
-                    <canvas id="radarChart" style="display: none;"></canvas>
+                    <div id="filteredDataDisplay"></div>
                 </div>
             </div>
         </main>
     </div>
+
+    <div class="navigation-boxes">
+        <div class="box">
+            <p class="box-title">About Us</p>
+            <a href="AboutUs.html">
+                <img src="LogoB.png" alt="About Us">
+            </a>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sound Meter Co. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="Privacy.html">Privacy Policy</a></li>
+                <li><a href="TermsOfUse.html">Terms of Service</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts.js"></script>
